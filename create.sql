@@ -14,7 +14,7 @@ CREATE TABLE cars(
 DROP TABLE IF EXISTS salespersons;
 CREATE TABLE salespersons(
 	id int AUTO_INCREMENT PRIMARY KEY,
-	staff_ID int NOT NULL, 
+	salesperson_ID int NOT NULL, 
     name varchar(50) NOT NULL,
     store varchar(50) NOT NULL
     );
@@ -40,10 +40,10 @@ CREATE TABLE invoices(
     date date NOT NULL,
     model varchar(50) NOT NULL,
     customer_ID int NOT NULL,
-    staff_ID int NOT NULL,
-    FOREIGN KEY (staff_id) REFERENCES salespersons(id),
+    salesperson_ID int NOT NULL,
+    FOREIGN KEY (salesperson_ID) REFERENCES salespersons(id),
     FOREIGN KEY (customer_ID) REFERENCES customers(id),
-    FOREIGN KEY (invoice_ID) REFERENCES invoice(id)
+    FOREIGN KEY (model) REFERENCES cars(model)
     );
     
 
