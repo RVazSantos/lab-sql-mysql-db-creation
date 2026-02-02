@@ -23,9 +23,9 @@ VALUES ("852399038",STR_TO_DATE("22-08-2018", '%d-%m-%Y'),"1","1","3"),
 	("731166526",STR_TO_DATE("31-12-2018", '%d-%m-%Y'),"3","3","5"),
     ("271135104",STR_TO_DATE("22-01-2019", '%d-%m-%Y'),"2","2","7");
 
-INSERT INTO customers(customer_ID, name, phone_number, address, city, state_province, country, postal_code)
-VALUES ("10001","Pablo Picasso","+34 636 17 63 82","Paseo de la Chopera, 14","Madrid","Madrid","Spain","28045"),
-	("20001","Abraham Lincoln","+1 305 907 7086","120 SW 8th St","Miami","Florida","United States","33130"),
-    ("30001","Napoléon Bonaparte","+33 1 79 75 40 00","40 Rue du Colisée","Paris","Île-de-France","France","75008");
+INSERT INTO customers(customer_ID, name, phone_number, email, address, city, state_province, country, postal_code)
+VALUES ("10001","Pablo Picasso","+34 636 17 63 82", NULL,"Paseo de la Chopera, 14","Madrid","Madrid","Spain","28045"),
+	("20001","Abraham Lincoln","+1 305 907 7086", NULL,"120 SW 8th St","Miami","Florida","United States","33130"),
+    ("30001","Napoléon Bonaparte","+33 1 79 75 40 00", NULL,"40 Rue du Colisée","Paris","Île-de-France","France","75008");
     
 SELECT * FROM cars
