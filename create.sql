@@ -38,12 +38,12 @@ CREATE TABLE invoices(
 	id int AUTO_INCREMENT PRIMARY KEY,
 	invoice_ID int NOT NULL, 
     date date NOT NULL,
-    model varchar(50) NOT NULL,
+    car_ID int NOT NULL,
     customer_ID int NOT NULL,
     salesperson_ID int NOT NULL,
     FOREIGN KEY (salesperson_ID) REFERENCES salespersons(id),
     FOREIGN KEY (customer_ID) REFERENCES customers(id),
-    FOREIGN KEY (model) REFERENCES cars(model)
+    FOREIGN KEY (car_ID) REFERENCES cars(id)
     );
     
 
