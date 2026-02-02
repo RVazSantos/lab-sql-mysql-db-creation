@@ -26,7 +26,10 @@ CREATE TABLE invoices(
     date date,
     model varchar(50),
     customer_ID int,
-    staff_ID int
+    staff_ID int,
+    CONSTRAINT fk1 FOREIGN KEY (staff_id) REFERENCES salespersons(id),
+    CONSTRAINT fk2 FOREIGN KEY (customer_ID) REFERENCES customers(id),
+    CONSTRAINT fk3 FOREIGN KEY (invoice_ID) REFERENCES invoice(id)
     );
     
 DROP TABLE IF EXISTS customers;
